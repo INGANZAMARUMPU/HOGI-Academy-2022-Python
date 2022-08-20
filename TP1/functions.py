@@ -34,13 +34,13 @@ def modifier(db):
 			break
 	if index != -1:
 		nom = input("Nouveau nom: ")
-		engl = float(input("Nouveau points engl: "))
-		maths = float(input("Nouveau points maths: "))
+		engl = input("Nouveau points engl: ")
+		maths = input("Nouveau points maths: ")
 		el = {
 			"no": no,
-			"nom": nom if nom != ""  else eleve["nom"],
-			"engl": engl if engl != 0.0 else eleve["engl"],
-			"maths": maths if maths != 0.0 else eleve["maths"]
+			"nom": nom if nom else eleve["nom"],
+			"engl": float(engl) if engl else eleve["engl"],
+			"maths": float(maths) if maths else eleve["maths"]
 		}
 		db[index] = el
 	else:
