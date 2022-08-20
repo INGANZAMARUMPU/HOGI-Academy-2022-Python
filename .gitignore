@@ -1,0 +1,9 @@
+*.pyc
+????_*.py
+
+*.sqlite3*
+
+**__*__
+**static
+**env
+**media
