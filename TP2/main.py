@@ -1,8 +1,11 @@
 from eleve import Eleve
 
-jewe = Eleve("75", "NKURUNZIZA", 75, 100, "H")
+menu = """
+Selectionner une action:
 
-print(type(jewe))
-print(jewe)
-print(jewe.total())
-print(jewe.moyenne())
+(1) Creer un eleve
+(2) Lister les eleves
+(3) Modifier un eleve
+(4) Supprimer un eleve
+(5) Chercher un eleve
+(0) Quitter:"""
