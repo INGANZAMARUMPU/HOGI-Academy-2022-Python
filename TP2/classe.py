@@ -21,6 +21,8 @@ class Classe:
 		eleve = self.rechercher(id)
 		if(eleve):
 			self.eleves.remove(eleve)
+		else:
+			print("eleve introuvable")
 
 	def __str__(self):
 		for e in self.eleves:
