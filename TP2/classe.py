@@ -6,9 +6,9 @@ class Classe:
 		self.eleves:list[Eleve] = []
 
 	def ajouter(self, eleve):
-		eleve = self.rechercher(eleve.no)
-		if(eleve):
-			raise Exception(f"l'eleve No.{eleve.no} existe déjà")
+		found = self.rechercher(eleve.no)
+		if(found):
+			raise Exception(f"l'eleve No.{found.no} existe déjà")
 		self.eleves.append(eleve)
 
 	def rechercher(self, id):
@@ -25,6 +25,8 @@ class Classe:
 			print("eleve introuvable")
 
 	def __str__(self):
+		string = f"VOICI LES ELEVES DE {self.nom}\n"
 		for e in self.eleves:
-			print(f"{e.no} {e.fullname} {e.maths} {e.engl} {e.sexe}")
+			string += f"{e.no} {e.fullname} {e.maths} {e.engl} {e.sexe}\n"
+		return string
 

@@ -9,7 +9,10 @@ def creer(classe):
 	sexe = input("saisissez le sexe:")
 
 	eleve = Eleve(no, fullname, maths, engl, sexe)
-	classe.ajouter(eleve)
+	try:
+		classe.ajouter(eleve)
+	except Exception as e:
+		print("HABAYE IKIBAZO:", e)
 
 def lister(classe):
 	print(classe)
@@ -40,5 +43,5 @@ def chercher(classe):
 		print(eleve)
 	else:
 		print("eleve introuvable")
-		
+
 
